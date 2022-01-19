@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'digital-7regular';
+    src: url('./fonts/digital-7-webfont.woff2') format('woff2'),
+         url('./fonts/digital-7-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(103, 116, 124);
+    background: linear-gradient(112deg, rgb(103, 116, 124) 0%, rgb(125, 141, 145) 100%);
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+}
+#calculator-main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#calculator-center{
+    display: flex;
+    flex-direction: column;
+    background-color: #5a5e61;
+    background-image: url("https://www.transparenttextures.com/patterns/broken-noise.png");
+    
+    height:820px;
+    width:400px;
+    border-radius: 15% 15% 8% 8%;
+    box-shadow: inset 0px 0px 15px 5px #343535;
+}
+#center-top-container{
+    width:400px;
+    height: 370px;
+    background-color: #d0d0cf;
+    background-image: url("https://www.transparenttextures.com/patterns/gradient-squares.png");    /* border-bottom-right-radius: 20%;
+    border-bottom-left-radius: 20%; */
+    border-radius: 15% 15% 20% 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid 1px #202022;
+    box-shadow: inset 0px 0px 15px 2px #9c9c9c;
+
+}
+#center-bottom-container{
+    width: 400px;
+    height: 450px;
+    display: flex;
+}
+#screen{
+    width: 340px;
+    height: 250px;
+    background: rgb(166,174,161);
+    background: linear-gradient(290deg, rgba(166,174,161,1) 0%, rgba(205,212,202,1) 100%); 
+    border-radius: 15% 15% 20% 20%;
+    border: solid 1px #56585D;
+    box-shadow: inset 3px 3px 10px  #9fa298;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#calculation-row{
+    font-family: digital-7regular, sans-serif;
+    margin: 30px 30px 0 30px;
+    font-size: 30px;
+    color: #2e312d;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    height: 70%;
+
+}
+
+#answer-row{
+    font-family: digital-7regular, sans-serif;
+    margin: 0 30px 30px 30px;
+    font-size: 40px;
+    color: #2e312d;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#main-button-container{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px 50px 50px;
+}
+#side-button-container{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: 30px 50px 50px 0;
+    justify-content: space-around;
+}
+.button-row{
+    display:flex;
+    justify-content: space-evenly;
+    height: 20%;
+    align-items: center;
+}
+.wide-button{
+    width: 40%;
+    height: 50px;
+    border-radius: 70px / 45px;
+    background: linear-gradient(38deg, rgba(34,40,43,1) 0%, rgba(34,40,43,1) 62%, rgba(65,69,70,1) 100%);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: solid 1px #333333;
+    background-color: #22282b;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+    box-shadow: inset 0px 0px 4px 0 #1d2124;
+
+}
+.wide-button:active{
+    font-size: 13px;
+}
+.number-button{
+    width: 27%;
+    height: 60px;
+    border-radius: 25px 25px 40px 40px;
+    background: linear-gradient(38deg, rgba(200,199,204,1) 0%, rgba(200,199,204,1) 45%, rgb(236, 232, 232) 100%);
+    border: solid 1px #3c3d3d;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background-color: #c8c7cc;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+    box-shadow: inset 0 0 4px 2px #89898b;
+
+}
+.number-button:active{
+    font-size: 17px;
+    box-shadow: inset 0 0 5px 3px #89898b;
+
+}
+.calculation-button{
+    height: 60px;
+    border-radius: 35%;
+    background: rgb(44,65,93);
+    background: linear-gradient(38deg, rgba(44,65,93,1) 0%, rgba(44,65,93,1) 74%, rgba(65,81,114,1) 100%); 
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: solid 1px #3c3d3d;
+    background-color: #2c415d;
+    background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
+    box-shadow: inset 0 0 4px 0px #273a52;
+}
+.calculation-button:active{
+    font-size: 16px;
+    box-shadow: inset 0 0 5px 2px #273a52;
+}
+#answer{
+    height: 60px;
+    border-radius: 5px;
+    background: rgb(44,65,93);
+    background: linear-gradient(58deg, rgba(44,65,93,1) 0%, rgba(44,65,93,1) 74%, rgba(65,81,114,1) 100%); 
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: solid 1px #3c3d3d;
+    background-color: #2c415d;
+    background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
+    box-shadow: inset 0 0 4px 0px #273a52;
+}
+#answer:active{
+    font-size: 17px;
+    box-shadow: inset 0 0 5px 2px #273a52;
+}
+#calculator-brand{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 0 25px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #35383a;
+}
+/* width: 0;
+height: 0;
+border-top: 100px solid red;
+border-left: 100px solid transparent; */
