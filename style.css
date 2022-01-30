@@ -27,7 +27,7 @@ html, body{
     display: flex;
     flex-direction: column;
     background-color: #5a5e61;
-    background-image: url("https://www.transparenttextures.com/patterns/broken-noise.png");
+    background-image: url("./img/broken-noise.png");
     
     height:820px;
     width:400px;
@@ -38,7 +38,7 @@ html, body{
     width:400px;
     height: 370px;
     background-color: #d0d0cf;
-    background-image: url("https://www.transparenttextures.com/patterns/gradient-squares.png");    /* border-bottom-right-radius: 20%;
+    background-image: url("./img/gradient-squares.png");    /* border-bottom-right-radius: 20%;
     border-bottom-left-radius: 20%; */
     border-radius: 15% 15% 20% 20%;
     display: flex;
@@ -115,7 +115,7 @@ html, body{
     font-weight: bold;
     border: solid 1px #333333;
     background-color: #22282b;
-    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+    background-image: url("./img/45-degree-fabric-dark.png");
     box-shadow: inset 0px 0px 4px 0 #1d2124;
 
 }
@@ -132,11 +132,30 @@ html, body{
     font-weight: bold;
     color: black;
     background-color: #c8c7cc;
-    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+    background-image: url("./img/45-degree-fabric-light.png");
     box-shadow: inset 0 0 4px 2px #89898b;
 
 }
 .number-button:active{
+    font-size: 17px;
+    box-shadow: inset 0 0 5px 3px #89898b;
+
+}
+.extra-number-button{
+    width: 27%;
+    height: 60px;
+    border-radius: 25px 25px 40px 40px;
+    background: linear-gradient(38deg, rgba(200,199,204,1) 0%, rgba(200,199,204,1) 45%, rgb(236, 232, 232) 100%);
+    border: solid 1px #3c3d3d;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background-color: #c8c7cc;
+    background-image: url("./img/45-degree-fabric-light.png");
+    box-shadow: inset 0 0 4px 2px #89898b;
+
+}
+.extra-number-button:active{
     font-size: 17px;
     box-shadow: inset 0 0 5px 3px #89898b;
 
@@ -151,7 +170,7 @@ html, body{
     font-weight: bold;
     border: solid 1px #3c3d3d;
     background-color: #2c415d;
-    background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
+    background-image: url("./img/binding-dark.png");
     box-shadow: inset 0 0 4px 0px #273a52;
 }
 .calculation-button:active{
@@ -164,15 +183,15 @@ html, body{
     background: rgb(44,65,93);
     background: linear-gradient(58deg, rgba(44,65,93,1) 0%, rgba(44,65,93,1) 74%, rgba(65,81,114,1) 100%); 
     color: white;
-    font-size: 20px;
+    font-size: 32px;
     font-weight: bold;
     border: solid 1px #3c3d3d;
     background-color: #2c415d;
-    background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
+    background-image: url("./img/binding-dark.png");
     box-shadow: inset 0 0 4px 0px #273a52;
 }
 #answer:active{
-    font-size: 17px;
+    font-size: 27px;
     box-shadow: inset 0 0 5px 2px #273a52;
 }
 #calculator-brand{
