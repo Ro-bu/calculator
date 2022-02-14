@@ -42,6 +42,23 @@ answerButton.addEventListener("click", event =>{
     let operator = event.target.innerText;
     operatorUsed(operator);
 });
+// CALL DELETE FUNCTION
+const deleteButton = document.querySelector("#delete");
+deleteButton.addEventListener("click", event =>{
+    deleteNumber();
+} )
+// CALL TOGGLENEGATIVE
+const negativeButton = document.querySelector("#button-negative");
+negativeButton.addEventListener("click", event =>{
+    toggleNegative();
+});
+// CALL COMMA BUTTON
+const commaButton = document.querySelector("#button-point");
+commaButton.addEventListener("click", event =>{
+    addComma();
+})
+
+
 
 // WHAT HAPPENS WHEN AN OPERATOR IS CLICKED
 function operatorUsed(operator) {
@@ -64,7 +81,7 @@ function operatorUsed(operator) {
             screenOperator.innerText = operator;
         };
 // CALCULATE WHEN BOTH NUMBERS AND OPERATOR EXISTS
-    } else if (operateWith !=="") {
+    } else if(operateWith !== "") {
         firstNumber = answerRow.innerText;
         let answer = operate(firstNumber, secondNumber, operateWith);
         answerRow.innerText = answer;
@@ -74,9 +91,12 @@ function operatorUsed(operator) {
         } else {
             screenOperator.innerText = operator;
         }
+// ADD OPERATOR WHEN THERE ARE TWO NUMBERS AND NO OPERATOR ON SCREEN
+    } else if(operateWith == ""){
+        screenOperator.innerText = operator;
     }
 };
-
+// OPERATIONS CALLED BY MAIN FUNCTION
 function operate(a, b, operator) {
     switch (operator) {
         case "+":
@@ -96,8 +116,6 @@ function operate(a, b, operator) {
             break;
     }
 }
-// ADD OPERATOR AFTER CALCULATION DONE WHEN NEEDED AND CLEAR ROW
-
 
 // MAIN CALCULATION FUNCTIONS
 function add(a, b) {
@@ -125,8 +143,37 @@ function divide(a, b) {
     return answer;
 };
 
-// CHECK IF CALC BUTTON IS CURRENTLY ACTIVE
-// DISABLE CALC BUTTONS
-// ENABLE CALC BUTTONS
+// DELete aka BACKSPACE FUNCTION
+function deleteNumber(){
+    let textToChange = calculationRow.innerText;
+    if(textToChange.length > 0){
+        let newText = textToChange.slice(0, textToChange.length -1);
+        calculationRow.innerText = newText;
+    }
+};
 
+// TOGGLE NEGATIVE FUNCTION
+function toggleNegative(){
+    let textToChange = calculationRow.innerText;
+    if(textToChange.length > 0){
+        let firstSymbol = textToChange.slice(0,1);
+        if(firstSymbol == "-"){
+            let newText = textToChange.slice(1);
+            calculationRow.innerText = newText;
+        } else {
+            let newText = "-" + textToChange;
+            calculationRow.innerText = newText;
+        }
+    }
+};
 
+// ADD COMMA FUNCTION
+
+function addComma(){
+    let textToChange = calculationRow.innerText;
+    let hasComma = textToChange.includes(".");
+    if(!hasComma && textToChange.length>0){
+        let newText = textToChange.concat(".");
+        calculationRow.innerText = newText;
+    }
+}
